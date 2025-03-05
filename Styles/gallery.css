@@ -106,7 +106,7 @@
   }
 }
 
-@media (width <= 25em) {
+@media (width <= 50em) {
   .gallery {
     & header {
       & span {

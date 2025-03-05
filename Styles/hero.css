@@ -284,7 +284,7 @@ section.hero {
   }
 }
 
-@media (width <= 25em) {
+@media (width <= 50em) {
   .hero {
     flex-direction: column-reverse;
     gap: 2rem;

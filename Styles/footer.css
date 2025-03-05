@@ -84,7 +84,7 @@ footer {
   }
 }
 
-@media (width <=25em) {
+@media (width <= 50em) {
   footer {
     display: grid;
     gap: 3rem;
