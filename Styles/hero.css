@@ -1,6 +1,4 @@
 section.hero {
-  /* TITLE */
-
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -9,6 +7,8 @@ section.hero {
   width: 100%;
   padding-block: 2.5rem;
   margin-inline: auto;
+
+  /* TITLE */
 
   & h1 div {
     display: inline-block;
@@ -117,11 +117,10 @@ section.hero {
       opacity: 0;
       transform: translateX(400%);
       animation: slideIn 1.5s 900ms ease forwards, appear 1.5s 800ms forwards;
-      
     }
     & img[src*="Stars 2"] {
       max-width: 2.5rem;
-      right: .5%;
+      right: 0.5%;
       bottom: 30%;
       z-index: 0;
 
@@ -213,5 +212,117 @@ section.hero {
 
   100% {
     transform: translateY(-15rem);
+  }
+}
+
+@keyframes slideUp-mobile {
+  0%,
+  22% {
+    transform: translateY(0);
+  }
+
+  23% {
+    transform: translateY(calc(-2.5rem - 15px));
+  }
+
+  25% {
+    transform: translateY(calc(-2.5rem + 12px));
+  }
+
+  27% {
+    transform: translateY(calc(-2.5rem - 8px));
+  }
+
+  29% {
+    transform: translateY(calc(-2.5rem + 5px));
+  }
+
+  33%,
+  55% {
+    transform: translateY(-2.5rem);
+  }
+
+  56% {
+    transform: translateY(calc(-5rem - 13px));
+  }
+
+  58% {
+    transform: translateY(calc(-5rem + 10px));
+  }
+
+  60% {
+    transform: translateY(calc(-5rem - 6px));
+  }
+
+  62% {
+    transform: translateY(calc(-5rem + 5px));
+  }
+
+  66%,
+  88% {
+    transform: translateY(-5rem);
+  }
+
+  89% {
+    transform: translateY(calc(-7.5rem - 10px));
+  }
+
+  91% {
+    transform: translateY(calc(-7.5rem + 10px));
+  }
+
+  93% {
+    transform: translateY(calc(-7.5rem - 5px));
+  }
+
+  95% {
+    transform: translateY(calc(-7.5rem + 3px));
+  }
+
+  100% {
+    transform: translateY(-7.5rem);
+  }
+}
+
+@media (width <= 25em) {
+  .hero {
+    flex-direction: column-reverse;
+    gap: 2rem;
+
+    margin-top: -2.5rem;
+
+    & > div:nth-child(2) {
+      max-width: 19.5rem;
+      max-height: 19.5rem;
+
+      & img[src*="Stars 1"] {
+        width: 3.5rem;
+      }
+
+      & img[src*="Stars 2"] {
+        width: 1.6rem;
+      }
+    }
+
+    & > div:nth-child(1) {
+      max-width: 19.5rem;
+
+      & h1 {
+        font-size: 2rem;
+      }
+
+      & h1 div {
+        height: 2rem;
+        vertical-align: top;
+      }
+
+      & h1 span {
+        animation: slideUp-mobile 5.25s 2s infinite ease;
+      }
+    }
+
+    & .buttons {
+      flex-direction: column-reverse;
+    }
   }
 }
